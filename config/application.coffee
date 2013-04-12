@@ -25,7 +25,7 @@ steroids.config.location = "http://localhost/index.html"
 # This will override steroids.config.location (that is for single webview apps, like in PhoneGap)
 # Default: false
 #
-# steroids.config.tabBar.enabled = true
+steroids.config.tabBar.enabled = true
 #
 # Array with objects to specify which tabs are created on app startup
 #
@@ -37,18 +37,18 @@ steroids.config.location = "http://localhost/index.html"
 #   - http://localhost/index.html (serves files locally from www, f.e. http://localhost/index.html would serve www/index.html)
 #   - http://www.google.com (directly from internet)
 #
-# steroids.config.tabBar.tabs = [
-#   {
-#     title: "Index"
-#     icon: "icons/shoebox@2x.png"
-#     location: "http://localhost/index.html"
-#   },
-#   {
-#     title: "Internet"
-#     icon: "icons/telescope@2x.png"
-#     location: "http://www.google.com"
-#   }
-# ]
+steroids.config.tabBar.tabs = [
+  {
+    title: "Index"
+    icon: "icons/shoebox@2x.png"
+    location: "http://localhost/index.html"
+  },
+  {
+    title: "Internet"
+    icon: "icons/telescope@2x.png"
+    location: "http://www.google.com"
+  }
+]
 
 # -- Status bar --
 # Sets status bar visible (carrier, clock, battery status)

@@ -1,7 +1,5 @@
-'use strict';
-
-var app = angular.module('Table42', [])
-  .config(['$routeProvider', function($routeProvider) {
+@app = angular.module('Table42', [])
+  .config(['$routeProvider', ($routeProvider) ->
     $routeProvider
       .when('/', {
         templateUrl: 'angular/views/main.html',
@@ -9,5 +7,5 @@ var app = angular.module('Table42', [])
       })
       .otherwise({
         redirectTo: '/'
-      });
-  }]);
+      })
+  ])
