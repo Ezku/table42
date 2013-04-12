@@ -1,0 +1,8 @@
+{
+  "name": "myProject",
+  "version": "0.0.1",
+  "dependencies": {
+    "steroids-js": "0.6.x",
+    "zepto": "1.0.0rc1"
+  }
+}
