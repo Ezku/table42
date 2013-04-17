@@ -1,0 +1,8 @@
+<div ng-controller="RestaurantController.index">
+  <ul class="list">
+    <li ng-click="open(restaurant.id)" ng-repeat="restaurant in restaurants | filter:search | orderBy:'name'">
+      {{restaurant.name}}
+      <span class="chevron"></span>
+    </li>
+  </ul>
+</div>
