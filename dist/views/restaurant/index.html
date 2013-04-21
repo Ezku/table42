@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <title>Steroids App</title>
+
+  <link rel="stylesheet" href="/stylesheets/ratchet-steroids.css" />
+  <link rel="stylesheet" href="/stylesheets/application.css" />
+
+  <script src="/appgyver/cordova.js"></script>
+  <script src="/components/steroids-js/steroids.js"></script>
+  <script src="/components/angular/angular.min.js"></script>
+
+  <script src="/models/models.js"></script>
+
+  <script src="/controllers/application.js"></script>
+  <script src="/controllers/restaurant.js"></script>
+</head>
+<body ng-app="table42">
+
+  <div ng-controller="RestaurantController.index">
+  <ul class="list">
+    <li ng-click="open(restaurant.id)" ng-repeat="restaurant in restaurants | filter:search | orderBy:'name'">
+      {{restaurant.name}}
+      <span class="chevron"></span>
+    </li>
+  </ul>
+</div>
+
+
+</body>
+</html>

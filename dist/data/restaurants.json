@@ -1,0 +1,12 @@
+[
+{
+  "id":0,
+  "name":"Grotesk",
+  "description":"<p>Grotesk on moderni ravintola, lorem ipsum</p>"
+},
+{
+  "id":1,
+  "name":"Chez Dominique",
+  "description":"<p>Chez Dominique on kiva ravintola, lorem ipsum</p>"
+}
+]
