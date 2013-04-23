@@ -1,8 +1,13 @@
-<div ng-controller="RestaurantController.index">
-  <ul class="list">
-    <li ng-click="open(restaurant.id)" ng-repeat="restaurant in restaurants | filter:search | orderBy:'name'">
-      {{restaurant.name}}
-      <span class="chevron"></span>
-    </li>
-  </ul>
+<div ng-controller="RestaurantController.index" class="content-padded">
+
+
+	<p>I want a</p>
+	
+	<h1>
+		Table for 2
+	</h1>
+
+	<p>right now</p>
+
+	<button ng-click="findTable()">Find me a table!</button>
 </div>

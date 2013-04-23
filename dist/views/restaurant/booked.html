@@ -18,20 +18,11 @@
 </head>
 <body ng-app="table42">
 
-  <div ng-controller="RestaurantController.index" class="content-padded">
+  <div ng-controller="RestaurantController.booked" class="content-padded">
+	<h1>We're on it!</h1>
 
-
-	<p>I want a</p>
-	
-	<h1>
-		Table for 2
-	</h1>
-
-	<p>right now</p>
-
-	<button ng-click="findTable()">Find me a table!</button>
+	<h2>There's a table waiting for you at {{restaurant.name}}.</h2>
 </div>
-
 
 </body>
 </html>

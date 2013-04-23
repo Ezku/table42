@@ -1,7 +1,7 @@
 # -- Required settings --
 # Name of the application, used as the app name when creating a build
 
-steroids.config.name = "My New Application"
+steroids.config.name = "Table42"
 
 # -- Location: steroids.config.location --
 # Defines the location of the HTML document that the initial steroids.views.WebView will render (for applications without the tab bar).
