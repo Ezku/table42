@@ -20,6 +20,24 @@ class window.RestaurantController
     $http.get("../../data/restaurants.json").success (data) ->
       $scope.restaurants = data
 
+    hardCodedRestaurant = {
+      "id":2,
+      "name":"Suola",
+      "description":"<p>Suola on huippuhyvä ravintola, lorem ipsum</p>"
+    }
+      
+    refreshRestaurants = ()->
+      $scope.restaurants.push hardCodedRestaurant
+      console.log($scope.restaurants)
+      $scope.$apply()
+
+    rightButton = new steroids.buttons.NavigationBarButton()
+    rightButton.title = "Refresh"
+    rightButton.onTap = ()->
+      refreshRestaurants()
+
+    steroids.view.navigationBar.setButtons { right: [rightButton] }
+
     title "Pick"
 
   @confirm: ($scope, $http) ->
