@@ -7,11 +7,11 @@ class window.RestaurantController
   param = (name) -> steroids.view.params[name]
 
   @index: ($scope, $http) ->
-    $scope.findTable = -> navigateTo "restaurant-picker.html?patronNumber=#{$scope.patronNumber}"
+    $scope.findTable = -> navigateTo "restaurant-picker.html?patronNumber=#{$scope.patronNumber}&playlist_id=#{$scope.playlist}"
     
     $scope.patronNumber = "2"
     
-    $scope.playlist = "fancy_pants" # hardcoded initial selection
+    $scope.playlist = "1" # hardcoded initial selection
 
     title "Table42"
     
@@ -20,10 +20,10 @@ class window.RestaurantController
   
   @pick: ($scope, $http) ->
     $scope.choose = (id) ->
-      navigateTo "confirm.html?id=#{id}&patronNumber=#{param('patronNumber')}"
+      navigateTo "confirm.html?id=#{id}&patronNumber=#{param('patronNumber')}&playlist_id=#{param('playlist_id')}"
 
     $scope.restaurants = []
-    $http.get("/data/restaurants.json").success (data) ->
+    $http.get("/data/restaurants#{param('playlist_id')}.json").success (data) ->
       $scope.restaurants = data
 
     # hardCodedRestaurant = {
@@ -48,19 +48,25 @@ class window.RestaurantController
 
   @confirm: ($scope, $http) ->
     $scope.confirm = (id) ->
-      navigateTo "booked.html?id="+id
+      navigateTo "booked.html?id=#{id}&playlist_id=#{param('playlist_id')}"
 
     $scope.patronNumber = param("patronNumber")
-    $http.get("/data/restaurants.json").success (data) ->
+    $http.get("/data/restaurants#{param('playlist_id')}.json").success (data) ->
       $scope.restaurant = data[param("id")]
 
     title "Confirm?"
+    
+    document.addEventListener "touchmove", (e)->
+      e.preventDefault()
 
   @booked: ($scope, $http) ->
-    $http.get("/data/restaurants.json").success (data) ->
+    $http.get("/data/restaurants#{param('playlist_id')}.json").success (data) ->
       $scope.restaurant = data[param("id")]
 
     title "Booked!"
+    
+    document.addEventListener "touchmove", (e)->
+      e.preventDefault()
     
   @show: ($scope, $http)->
     $http.get("/data/restaurants.json").success (data) ->
