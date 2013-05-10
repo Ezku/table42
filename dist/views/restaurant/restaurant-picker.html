@@ -18,8 +18,7 @@
 </head>
 <body ng-app="table42">
 
-  <div ng-controller="RestaurantController.pick" class="content-padded">
-	<p>These restaurants have free seats right now.</p>
+  <div ng-controller="RestaurantController.pick">
 	<ul class="list">
 	  <li ng-click="choose(restaurant.id)" ng-repeat="restaurant in restaurants | filter:search | orderBy:'name'">
 	    {{restaurant.name}}

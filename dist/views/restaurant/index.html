@@ -18,18 +18,33 @@
 </head>
 <body ng-app="table42">
 
-  <div ng-controller="RestaurantController.index" class="content-padded">
+  <div ng-controller="RestaurantController.index" class="content-padded centered">
+    
+    <img src="/images/table42.png" width="100px">
 
+	<p>I want a table for</p>
+  
+  <select ng-model="patronNumber">
+    <option value="1">one</option>
+    <option value="2">two</option>
+    <option value="3">three</option>
+    <option value="4">four</option>
+    <option value="5">five</option>
+    <option value="6">six</option>
+    <option value="7">seven</option>
+    <option value="8">eight</option>
+  </select>
+  
+  <p>using playlist</p>
+  
+  <select ng-model="playlist">
+    <option value="fancy_pants">Fancy Pants</option>
+    <option value="cheap_eats">Cheap Eats</option>
+  </select>
 
-	<p>I want a</p>
-	
-	<h1>
-		Table for 2
-	</h1>
-
-	<p>right now</p>
-
-	<button ng-click="findTable()">Find me a table!</button>
+    <div class="wide">
+	<a class="button button-main button-block" ng-click="findTable()">Find me a table!</a>
+    </div>
 </div>
 
 

@@ -8,5 +8,16 @@
   "id":1,
   "name":"Chez Dominique",
   "description":"<p>Chez Dominique on kiva ravintola, lorem ipsum</p>"
+},
+{
+  "id":2,
+  "name":"Savoy",
+  "description":"<p>Chez Dominique on kiva ravintola, lorem ipsum</p>"
+},
+{
+  "id":3,
+  "name":"Lehtovaara",
+  "description":"<p>Chez Dominique on kiva ravintola, lorem ipsum</p>"
 }
+
 ]

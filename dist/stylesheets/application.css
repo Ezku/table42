@@ -1,3 +1,46 @@
 p {
-  margin: 1em 0;
+  margin: 0.5em 0;
+  font-family:Verdana;
+  font-size:18px;
+}
+
+.centered {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: start;
+  -webkit-box-align: center;
+}
+
+.wide {
+  min-width:300px;
+  margin-top:40px;
+}
+
+.wide > a {
+  font-size:24px;
+}
+
+select {
+  font-size:18px;
+  font-family:Verdana;
+  font-weight:500;
+  -webkit-box-sizing: border-box;
+  text-align:center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+
+.plus {
+  float:right;
+  font-size:30px;
+  color:#999;
+  font-weight:600;
+  line-height:0.3;
+}
+
+li {
+  font-size:16px;
+  font-family:Verdana;
 }
